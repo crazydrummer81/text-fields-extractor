@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MS Word Merge Fields Extractor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="source-text-header">
+		<div class="source-text-params">
+			<label for="">Prefix:</label>
+			<input type="text" class="source-text-param" id="source-text-param-prefix" name="source-text-param-prefix" value="«">
+			<label for="">Postfix:</label>
+			<input type="text" class="source-text-param" id="source-text-param-postfix" name="source-text-param-postfix" value="»">
+		</div>
+		<label for="source-text" class="source-text-label">Исходный текст:</label>
+	</div>
+	<textarea name="source-text" id="source-text" autofocus></textarea>
+	<div class="result-label" id="result-label">Поля (<span>0</span>):</div>
+	<div class="result" id="result"></div>
+	<script src="script.js"></script>
+</body>
+</html>

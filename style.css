@@ -1,0 +1,49 @@
+body {
+	font-family: Roboto;
+}
+textarea {
+	width: 80em; height: 25em;
+	resize: both;
+}
+.button-copy {
+	background: rgb(220,255,220);
+	border: 1px solid darkgreen;
+	border-radius: 3px;
+	padding: 5px;
+	width: 20em;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+.source-text-label, 
+.result-label { font-size: 1.2em; font-weight: bold; display: block;}
+/* .source-text-label { display: inline-block; } */
+.result {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+.source-text-header {
+	display: flex; flex-direction: column; 
+	margin-bottom: 10px;
+}
+.source-text-params {
+	margin-bottom: 10px;
+}
+.source-text-param {
+	width: 5em;
+}
+.button-copy::before {
+	content: "Copied";
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(0, 255, 0, .8);
+	display: flex; align-items: center; justify-content: center;
+	opacity: 0;
+	transition: all 100ms ease-in-out;
+}
+.button-copy.overlayed::before {
+	opacity: 1;
+	transition: all 100ms ease-in-out;
+}
